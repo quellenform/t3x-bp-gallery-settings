@@ -1,0 +1,11 @@
+# CONTENT ELEMENT SETTINGS
+lib.contentElement.settings.responsiveimages.contentelements.textpic {
+  intext_left < .left
+  intext_right < .right
+}
+
+# CTYPE: TEXTPIC
+# Undo this ridiculous splitting into several useless templates of EXT:bootstrap_package
+# and simplify everything to one single template, as it was originally used in the core.
+tt_content.textpic.templateName >
+tt_content.textpic.templateName = Textpic

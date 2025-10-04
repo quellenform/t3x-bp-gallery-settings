@@ -1,0 +1,11 @@
+# CONTENT ELEMENT SETTINGS
+lib.contentElement.settings.responsiveimages.contentelements.textmedia {
+  intext_left < .left
+  intext_right < .right
+}
+
+# CTYPE: TEXTMEDIA
+# Undo this ridiculous splitting into several useless templates of EXT:bootstrap_package
+# and simplify everything to one single template, as it was originally used in the core.
+tt_content.textmedia.templateName >
+tt_content.textmedia.templateName = Textmedia

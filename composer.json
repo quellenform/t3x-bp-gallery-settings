@@ -1,0 +1,48 @@
+{
+	"name": "quellenform/t3x-bp-gallery-settings",
+	"type": "typo3-cms-extension",
+	"description": "Gallery Settings for Bootstrap Package",
+	"keywords": [
+		"TYPO3",
+		"extension"
+	],
+	"license": [
+		"GPL-3.0-or-later"
+	],
+	"homepage": "https://extensions.typo3.org/extension/bp_gallery_settings",
+	"support": {
+		"source": "https://github.com/quellenform/t3x-bp-gallery-settings",
+		"issues": "https://github.com/quellenform/t3x-bp-gallery-settings/issues"
+	},
+	"authors": [
+		{
+			"name": "Stephan Kellermayr",
+			"email": "typo3@quellenform.at",
+			"role": "Developer",
+			"homepage": "https://www.quellenform.at/"
+		}
+	],
+	"require": {
+		"typo3/cms-core": ">=12.4 || ^13 || 14.*.*@dev",
+		"bk2k/bootstrap-package": ">=13.0.10 <16 || 14.0.x-dev || 15.0.x-dev || dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"Quellenform\\BpGallerySettings\\": "Classes"
+		}
+	},
+	"replace": {
+		"typo3-ter/bp-gallery-settings": "self.version"
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://composer.typo3.org/"
+		}
+	],
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "bp_gallery_settings"
+		}
+	}
+}

@@ -1,0 +1,29 @@
+#TCEFORM.tt_content.imageorient.removeItems = 1,2,9,10,17,18
+TCEFORM.tt_content.imageorient.removeItems = 1,2,9,10
+
+#TCEFORM.tt_content.imageorient.addItems {
+#  0 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.0
+#  0.icon = content-beside-text-img-above-center
+#  1 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.1
+#  1.icon = content-beside-text-img-above-right
+#  2 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.2
+#  2.icon = content-beside-text-img-above-left
+#  8 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.3
+#  8.icon = content-beside-text-img-below-center
+#  9 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.4
+#  9.icon = content-beside-text-img-below-right
+#  10 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.5
+#  10.icon = content-beside-text-img-below-left
+#  17 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.6
+#  17.icon = content-inside-text-img-right
+#  18 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.7
+#  18.icon = content-inside-text-img-left
+#  25 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.9
+#  25.icon = content-beside-text-img-right
+#  26 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.10
+#  26.icon = content-beside-text-img-left
+#  125 = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.imageorient.125
+#  125.icon = content-bootstrappackage-beside-text-img-centered-right
+#  126 = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.imageorient.126
+#  126.icon = content-bootstrappackage-beside-text-img-centered-left
+#}

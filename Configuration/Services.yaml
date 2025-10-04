@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Quellenform\BpGallerySettings\:
+    resource: '../Classes/*'
+
+  Quellenform\BpGallerySettings\DataProcessing\ImageProcessor:
+    tags:
+      - { name: 'data.processor', identifier: 'gallery-settings' }

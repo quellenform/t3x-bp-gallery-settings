@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" date="2024-07-19T14:14:00Z" product-name="bp_gallery_settings">
+		<header />
+		<body>
+			<trans-unit id="tt_content.imageshape" resname="tt_content.imageshape">
+				<source>Image Shape</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_width" resname="tt_content.gallery_width">
+				<source>Base width of the Gallery</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_ratio" resname="tt_content.gallery_ratio">
+				<source>Breakpoint Ratio</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_carousel" resname="tt_content.gallery_carousel">
+				<source>Gallery Carousel</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_nowrap" resname="tt_content.gallery_nowrap">
+				<source>Embedded in Body</source>
+			</trans-unit>
+
+			<trans-unit id="tt_content.imageshape.I.1" resname="tt_content.imageshape.I.1">
+				<source>Rounded</source>
+			</trans-unit>
+			<trans-unit id="tt_content.imageshape.I.2" resname="tt_content.imageshape.I.2">
+				<source>Circle</source>
+			</trans-unit>
+			<trans-unit id="tt_content.imageshape.I.3" resname="tt_content.imageshape.I.3">
+				<source>Cards</source>
+			</trans-unit>
+			<trans-unit id="tt_content.imageshape.I.4" resname="tt_content.imageshape.I.4">
+				<source>Thumbnail</source>
+			</trans-unit>
+
+			<trans-unit id="tt_content.gallery_width.I.1" resname="tt_content.gallery_width.I.1">
+				<source>Extra small</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_width.I.2" resname="tt_content.gallery_width.I.2">
+				<source>Small</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_width.I.3" resname="tt_content.gallery_width.I.3">
+				<source>Medium</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_width.I.4" resname="tt_content.gallery_width.I.4">
+				<source>Half size</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_width.I.5" resname="tt_content.gallery_width.I.5">
+				<source>Large</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_width.I.6" resname="tt_content.gallery_width.I.6">
+				<source>Extra large</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_width.I.7" resname="tt_content.gallery_width.I.7">
+				<source>Extra extra large</source>
+			</trans-unit>
+
+			<trans-unit id="tt_content.gallery_ratio.I.1" resname="tt_content.gallery_ratio.I.1">
+				<source>Priority to smartphone</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_ratio.I.2" resname="tt_content.gallery_ratio.I.2">
+				<source>Keep allocation</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_ratio.I.3" resname="tt_content.gallery_ratio.I.3">
+				<source>Balanced allocation</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_ratio.I.4" resname="tt_content.gallery_ratio.I.4">
+				<source>Focus on text width</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_ratio.I.5" resname="tt_content.gallery_ratio.I.5">
+				<source>Focus on image width</source>
+			</trans-unit>
+
+			<trans-unit id="tt_content.gallery_carousel.I.1" resname="tt_content.gallery_carousel.I.1">
+				<source>Slide</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_carousel.I.2" resname="tt_content.gallery_carousel.I.2">
+				<source>Slide (autoplay)</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_carousel.I.3" resname="tt_content.gallery_carousel.I.3">
+				<source>Fade</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_carousel.I.4" resname="tt_content.gallery_carousel.I.4">
+				<source>Fade (autoplay)</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,36 @@
+# CTYPE: BOOTSTRAP PACKAGE TAB
+tt_content.tab {
+  dataProcessing {
+    20 {
+      dataProcessing {
+        1700000001 < lib.contentElement.dataProcessing.1700000001
+        1700000001 {
+          CType = tx_bootstrappackage_tab_item
+          orientField = mediaorient
+          orientClassMap {
+            tx_bootstrappackage_tab_item {
+              top = tab-pane-content-top
+              bottom = tab-pane-content-bottom
+              right = tab-pane-content-right
+              left = tab-pane-content-left
+              intext_right = tab-pane-content-intext tab-pane-content-right
+              intext_left = tab-pane-content-intext tab-pane-content-left
+              centered_right = tab-pane-content-centered tab-pane-content-right
+              centered_left = tab-pane-content-centered tab-pane-content-left
+            }
+          }
+        }
+      }
+      settings {
+        # CONTENT ELEMENT SETTINGS
+        responsiveimages.contentelements.tx_bootstrappackage_tab_item < lib.contentElement.settings.responsiveimages.contentelements.tab
+        responsiveimages.contentelements.tx_bootstrappackage_tab_item {
+          centered_left < .left
+          centered_right < .right
+          intext_left < .left
+          intext_right < .right
+        }
+      }
+    }
+  }
+}

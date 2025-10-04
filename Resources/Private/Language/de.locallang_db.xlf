@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:bp_gallery_settings/Resources/Private/Language/locallang_db.xlf" date="2024-07-19T14:14:00Z" product-name="bp_gallery_settings">
+		<header />
+		<body>
+			<trans-unit id="tt_content.imageshape" resname="tt_content.imageshape">
+				<source>Image Shape</source>
+				<target>Bild Form</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_width" resname="tt_content.gallery_width">
+				<source>Base width of the Gallery</source>
+				<target>Basisbreite der Gallerie</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_ratio" resname="tt_content.gallery_ratio">
+				<source>Breakpoint Ratio</source>
+				<target>Breakpoint Verhältnis</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_carousel" resname="tt_content.gallery_carousel">
+				<source>Gallery Carousel</source>
+				<target>Gallery Karusell</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_nowrap" resname="tt_content.gallery_nowrap">
+				<source>Embedded in Body</source>
+				<target>Eingebettet im Body</target>
+			</trans-unit>
+
+			<trans-unit id="tt_content.imageshape.I.1" resname="tt_content.imageshape.I.1">
+				<source>Rounded</source>
+				<target>Abgerundet</target>
+			</trans-unit>
+			<trans-unit id="tt_content.imageshape.I.2" resname="tt_content.imageshape.I.2">
+				<source>Circle</source>
+				<target>Kreis</target>
+			</trans-unit>
+			<trans-unit id="tt_content.imageshape.I.3" resname="tt_content.imageshape.I.3">
+				<source>Karten</source>
+				<target>Cards</target>
+			</trans-unit>
+			<trans-unit id="tt_content.imageshape.I.4" resname="tt_content.imageshape.I.4">
+				<source>Thumbnail</source>
+				<target>Thumbnail</target>
+			</trans-unit>
+
+			<trans-unit id="tt_content.gallery_width.I.1" resname="tt_content.gallery_width.I.1">
+				<source>Extra small</source>
+				<target>Extra small</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_width.I.2" resname="tt_content.gallery_width.I.2">
+				<source>Small</source>
+				<target>Small</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_width.I.3" resname="tt_content.gallery_width.I.3">
+				<source>Medium</source>
+				<target>Medium</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_width.I.4" resname="tt_content.gallery_width.I.4">
+				<source>Half size</source>
+				<target>Half size</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_width.I.5" resname="tt_content.gallery_width.I.5">
+				<source>Large</source>
+				<target>Large</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_width.I.6" resname="tt_content.gallery_width.I.6">
+				<source>Extra large</source>
+				<target>Extra large</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_width.I.7" resname="tt_content.gallery_width.I.7">
+				<source>Extra extra large</source>
+				<target>Extra extra large</target>
+			</trans-unit>
+
+			<trans-unit id="tt_content.gallery_ratio.I.1" resname="tt_content.gallery_ratio.I.1">
+				<source>Priority to smartphone</source>
+				<target>Priorität auf Smartphone</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_ratio.I.2" resname="tt_content.gallery_ratio.I.2">
+				<source>Keep allocation</source>
+				<target>Behalte Aufteilung</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_ratio.I.3" resname="tt_content.gallery_ratio.I.3">
+				<source>Balanced allocation</source>
+				<target>Ausgewogene Aufteilung</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_ratio.I.4" resname="tt_content.gallery_ratio.I.4">
+				<source>Focus on text width</source>
+				<target>Fokus auf Textbreite</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_ratio.I.5" resname="tt_content.gallery_ratio.I.5">
+				<source>Focus on image width</source>
+				<target>Fokus auf Bildbreite</target>
+			</trans-unit>
+
+			<trans-unit id="tt_content.gallery_carousel.I.1" resname="tt_content.gallery_carousel.I.1">
+				<source>Slide</source>
+				<target>Slide</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_carousel.I.2" resname="tt_content.gallery_carousel.I.2">
+				<source>Slide (autoplay)</source>
+				<target>Slide (autoplay)</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_carousel.I.3" resname="tt_content.gallery_carousel.I.3">
+				<source>Fade</source>
+				<target>Fade</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery_carousel.I.4" resname="tt_content.gallery_carousel.I.4">
+				<source>Fade (autoplay)</source>
+				<target>Fade (autoplay)</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

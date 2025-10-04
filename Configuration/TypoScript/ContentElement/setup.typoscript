@@ -1,0 +1,134 @@
+lib.contentElement {
+  partialRootPaths {
+    8 = EXT:bp_gallery_settings/Resources/Private/Partials/ContentElements/
+  }
+  templateRootPaths {
+    8 = EXT:bp_gallery_settings/Resources/Private/Templates/ContentElements/
+  }
+
+  dataProcessing {
+    # Preprocess data with ImageProcessor
+    1700000001 = Quellenform\BpGallerySettings\DataProcessing\ImageProcessor
+    1700000001 {
+      allowedCTypes = textpic,textmedia,tx_bootstrappackage_tab_item
+      gridGutterWidth = {$plugin.bootstrap_package.settings.scss.$grid-gutter-width}
+      orientField = imageorient
+
+      ### field:imageorient ######################################################################################################
+      # Define which image orientation corresponds to which position (should not normally be changed)
+      # (field:imageorient > position)
+      orientMap {
+        0 = top
+        8 = bottom
+        17 = intext_right
+        18 = intext_left
+        25 = right
+        26 = left
+        125 = centered_right
+        126 = centered_left
+      }
+
+      # Map positions to CSS classes
+      # (CType[position] > CSS class)
+      orientClassMap {
+        textpic {
+          top = textpic-above
+          bottom = textpic-below
+          right = textpic-right
+          left = textpic-left
+          intext_right = textpic-intext textpic-right
+          intext_left = textpic-intext textpic-left
+          centered_right = textpic-centered textpic-right
+          centered_left = textpic-centered textpic-left
+        }
+        textmedia {
+          top = textmedia-above
+          bottom = textmedia-below
+          right = textmedia-right
+          left = textmedia-left
+          intext_right = textmedia-intext textmedia-right
+          intext_left = textmedia-intext textmedia-left
+          centered_right = textmedia-centered textmedia-right
+          centered_left = textmedia-centered textmedia-left
+        }
+      }
+
+      # Map database values to width keys (use them also in your CSS!)
+      # Note: The numeric key is decisive, so ensure that it is in the correct order (from lower to higher mapping)
+      # (field:gallery_width > resolution identifier)
+      defaultWidth = 4
+      widthMap {
+        1 = min
+        2 = micro
+        3 = mini
+        4 = medium
+        5 = large
+        6 = super
+        7 = max
+      }
+
+      # Map width-keys to resolution values (100 / 36 * resolution)
+      # This needs to be reflected in CSS too!
+      # (resolution identifier > resolution value)
+      #resolutionMap {
+      #  defaultKey = medium
+      #  # 6 = 1:5
+      #  min = 6
+      #  # 9 = 1:3
+      #  micro = 9
+      #  # 12 = 1:2
+      #  mini = 12
+      #  # 18 = 1:1
+      #  medium = 18
+      #  # 24 = 2:1
+      #  large = 24
+      #  # 27 = 3:1
+      #  super = 27
+      #  # 30 = 5:1
+      #  max = 30
+      #}
+      resolutionMap = {$plugin.bootstrap_package.settings.scss.$gallery-resolution-map}
+
+      # Map database values to shape classes (use them also in your CSS!)
+      # (field:imageshape > CSS class)
+      shapeMap {
+        1 = gallery-shape-rounded
+        2 = gallery-shape-circle
+        3 = gallery-shape-cards
+        4 = gallery-shape-thumbnail
+      }
+
+      # Map database values to carousel settings
+      # (field:gallery_carousel > carousel settings)
+      carouselMap {
+        # Slide
+        1 {
+          autoplay = 0
+          interval = 6000
+          transition = slide
+          wrap = 1
+          showNavTitle = 0
+        }
+        # Slide (autoplay)
+        2 < .1
+        2 {
+          autoplay = 1
+          showIndicators = 0
+          showControls = 0
+        }
+        # Fade
+        3 < .1
+        3 {
+          transition = fade
+        }
+        # Fade (autoplay)
+        4 < .3
+        4 {
+          autoplay = 1
+          showIndicators = 0
+          showControls = 0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" xmlns:gs="http://typo3.org/ns/Quellenform/BpGallerySettings/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="carousel gallery-carousel gallery-carousel-{imagecols} carousel-{imageConfig.galleryCarousel.transition} slide" id="carousel-{data.uid}" data-bs-wrap="{f:if(condition:imageConfig.galleryCarousel.wrap,then:'true',else:'false')}" data-bs-ride="{f:if(condition:imageConfig.galleryCarousel.autoplay,then:'carousel',else:'false')}" data-bs-interval="{f:if(condition:imageConfig.galleryCarousel.interval,then:imageConfig.galleryCarousel.interval,else:'')}" role="region" aria-roledescription="carousel">
+    <div class="carousel-inner">
+        <f:variable name="imageCount">{imageConfig.galleryCarouselSlides -> f:count()}</f:variable>
+        <f:for each="{imageConfig.galleryCarouselSlides}" as="files" iteration="iteration">
+            <f:variable name="itemClass">item</f:variable>
+            <f:if condition="{iteration.isFirst}">
+                <f:variable name="itemClass">{itemClass} active</f:variable>
+            </f:if>
+            <f:variable name="itemClass">{itemClass} carousel-item</f:variable>
+            <f:variable name="itemClass">{itemClass} carousel-item-layout-{f:if(condition: item.data.layout,then:item.data.layout,else: 'custom')}</f:variable>
+            <f:variable name="itemClass">{itemClass} carousel-item-type-{item.data.item_type}</f:variable>
+            <f:variable name="itemStyle" />
+            <div class="{itemClass}" aria-current="{f:if(condition: iteration.isFirst, then:'true', else: 'false')}" data-itemno="{iteration.index}" style="{itemStyle}" role="group" aria-roledescription="slide">
+                <div class="carousel-content gallery-row {imageConfig.imgClass}">
+                    <f:for each="{files}" as="file" iteration="fileIteration">
+                        <div class="gallery-item gallery-item-size-{data.imagecols}">
+                            <f:render partial="Media/Type" arguments="{file: file, data: data, settings: settings, variants: variants}" />
+                        </div>
+                    </f:for>
+                </div>
+            </div>
+        </f:for>
+    </div>
+    <f:if condition="{imageConfig.galleryCarousel.showIndicators}">
+        <f:render partial="GalleryCarousel/Control/Indicator" arguments="{_all}" />
+    </f:if>
+    <f:if condition="{imageConfig.galleryCarousel.showControls}">
+        <f:render partial="GalleryCarousel/Control/Control" arguments="{_all}" />
+    </f:if>
+</div>
+
+</html>

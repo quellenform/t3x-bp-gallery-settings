@@ -1,0 +1,11 @@
+plugin.bootstrap_package.settings.scss {
+  $image-rounded = 1rem
+  # Map width-keys to resolution values (100 / 36 * resolution)
+  $gallery-resolution-map = ("min": 6, "micro": 9, "mini": 12, "medium": 18, "large": 24, "super": 27, "max": 30)
+  # Distance between frame and content! Distributed automatically in CSS.
+  $grid-gutter-width = 40px
+  # Define the minimum dimensions at which your layout will change, adapting to different screen sizes, for use in media queries.
+  #$grid-breakpoints = ("xs": 0, "sm": 576px, "md": 768px, "lg": 992px, "xl": 1200px, "xxl": 1400px)
+  # Define the maximum width of `.container` for different screen sizes.
+  #$container-max-widths = ("sm": 540px, "md": 720px, "lg": 960px, "xl": 1140px, "xxl": 1320px)
+}

@@ -1,0 +1,278 @@
+//
+// Gallery Settings for Textpic/Textmedia & Tabs
+// --------------------------------------------------
+
+@import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/_variables";
+@import "EXT:bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/_functions";
+@import "EXT:bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/_variables";
+@import "EXT:bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/mixins/_breakpoints";
+
+// Widths of the galleries
+// scss-docs-start gallery-resolution-map
+$gallery-resolution-map: (
+	"min": 6,
+	"micro": 9,
+	"mini": 12,
+	"medium": 18,
+	"large": 24,
+	"super": 27,
+	"max": 30) !default;
+
+// Base values for calculating widths
+// scss-docs-start gallery-sizes
+$gallery-resolutions: (
+	1: 2.777777777778,
+	2: 5.555555555556,
+	3: 8.333333333333,
+	4: 11.111111111111,
+	5: 13.888888888889,
+	6: 16.666666666667,
+	7: 19.444444444444,
+	8: 22.222222222222,
+	9: 25,
+	10: 27.777777777778,
+	11: 30.555555555556,
+	12: 33.333333333333,
+	13: 36.111111111111,
+	14: 38.888888888889,
+	15: 41.666666666667,
+	16: 44.444444444444,
+	17: 47.222222222222,
+	18: 50,
+	19: 52.777777777778,
+	20: 55.555555555556,
+	21: 58.333333333333,
+	22: 61.111111111111,
+	23: 63.888888888889,
+	24: 66.666666666667,
+	25: 69.444444444444,
+	26: 72.222222222222,
+	27: 75,
+	28: 77.777777777778,
+	29: 80.555555555556,
+	30: 83.333333333333,
+	31: 86.111111111111,
+	32: 88.888888888889,
+	33: 91.666666666667,
+	34: 94.444444444444,
+	35: 97.222222222222,
+	36: 100);
+
+
+//
+// Bootstrap Package Fixes/Overrides
+// --------------------------------------------------
+
+// Reset the default width for text elements (will be precisely defined later by the width of the images)
+@include media-breakpoint-up('md') {
+
+	.textmedia .textmedia-text,
+	.textpic .textpic-text,
+	.tab-pane-content .tab-pane-content-text {
+		width: unset;
+	}
+}
+
+// Prevent the image description from going beyond the scope
+figure .caption {
+	overflow-wrap: anywhere;
+}
+
+// Reset the float values for image in text
+.frame {
+	clear: both;
+}
+
+// Round the calculated values for pixel-perfect images
+.gallery-item {
+	width: #{'round(up, calc((100% / var(--gallery-columns)) - (var(--gallery-gap) * (var(--gallery-columns) - 1)) / var(--gallery-columns)), 1px)'};
+}
+
+// Let Flex decide how much space there should be between the images
+.gallery-row {
+	justify-content: space-between;
+	column-gap: unset;
+}
+
+
+//
+// Gallery Image Shape
+// --------------------------------------------------
+@mixin gallery-shape-border() {
+	background-color: var(--bs-body-bg);
+	border: var(--bs-border-width) solid var(--bs-border-color-translucent);
+	border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+}
+
+.gallery-shape {
+	&-rounded {
+		img {
+			border-radius: 5px;
+		}
+	}
+
+	&-circle {
+		img {
+			border-radius: 50%;
+		}
+	}
+
+	&-cards {
+		.gallery-item {
+			overflow: hidden;
+			@include gallery-shape-border();
+
+			figcaption {
+				padding: 0.25rem 0.5rem;
+			}
+		}
+	}
+
+	&-thumbnail {
+		padding: 0.5rem;
+		box-shadow: var(--bs-box-shadow-sm);
+		@include gallery-shape-border();
+	}
+}
+
+//
+// Gallery Carousel
+// --------------------------------------------------
+.gallery-carousel {
+	.item {
+		height: fit-content;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.carousel-control {
+		background-image: none;
+	}
+
+	.carousel-indicators {
+		margin-top: 0.5rem;
+
+		button {
+			background-color: var(--bs-carousel-indicator-active-bg);
+		}
+	}
+
+	figure {
+		margin-bottom: 0;
+
+		.caption {
+			display: none;
+		}
+
+		a:focus {
+			outline: none;
+		}
+	}
+}
+
+.frame .gallery-carousel .carousel-indicators button {
+	background-color: var(--bs-carousel-indicator-active-bg);
+}
+
+//
+// Gallery Width
+// --------------------------------------------------
+.textmedia,
+.textpic {
+	row-gap: calc(#{$grid-gutter-width} / 2);
+}
+
+.textmedia-text,
+.textpic-text,
+.tab-pane-content-text {
+	flex: 1;
+}
+
+@mixin textpic-media() {
+
+	@each $key,
+	$resolution in $gallery-resolution-map {
+		$gallery-width: round(map-get($gallery-resolutions, $resolution) * 10000) / 10000;
+
+		.tab-content .gallery-size-#{$key},
+		.textmedia .textmedia-gallery.gallery-size-#{$key},
+		.textpic .textpic-gallery.gallery-size-#{$key} {
+			width: #{'round(up, calc((100% - var(--corrections, 0px)) * ' + ($gallery-width / 100) + '), 1px)'};
+		}
+	}
+}
+
+@include textpic-media();
+
+// Add grid gutter width to all position except above/below
+div:not([class*="-above"]):not([class*="-below"]) div[class*="-gallery"],
+div:not([class*="-above"]):not([class*="-below"]) .tab-pane-content-media {
+	--corrections: #{$grid-gutter-width};
+}
+
+// Expand width to 100% if the allocation is not to be retained
+@include media-breakpoint-down('md') {
+
+	div:not([class*="keep-allocation"]).textmedia-item.textmedia-gallery,
+	div:not([class*="keep-allocation"]).textpic-item.textpic-gallery,
+	div:not([class*="keep-allocation"]).tab-pane-content-media {
+		width: 100%;
+	}
+}
+
+.textmedia-right,
+.textpic-right {
+
+	.gallery-keep-allocation.textmedia-gallery,
+	.gallery-keep-allocation.textpic-gallery {
+		order: 2;
+	}
+}
+
+//
+// Textmedia/Textpic Intext
+// --------------------------------------------------
+.textmedia-intext,
+.textpic-intext,
+.tab-pane-content-intext {
+	display: block;
+
+	&.textmedia-right .textmedia-gallery,
+	&.textpic-right .textpic-gallery,
+	&.tab-pane-content-right .tab-pane-content-media {
+		float: right;
+		margin: 0 0 calc(#{$grid-gutter-width} / 2) #{$grid-gutter-width};
+	}
+
+	&.textmedia-left .textmedia-gallery,
+	&.textpic-left .textpic-gallery,
+	&.tab-pane-content-left .tab-pane-content-media {
+		float: left;
+		margin: 0 #{$grid-gutter-width} calc(#{$grid-gutter-width} / 2) 0;
+	}
+}
+
+//
+// Textmedia/Textpic Above/Below
+// --------------------------------------------------
+.textmedia-above,
+.textmedia-below,
+.textpic-above,
+.textpic-below {
+	flex-direction: column;
+	align-items: center;
+}
+
+//
+// Nowrap
+// --------------------------------------------------
+.gallery-nowrap .frame-header {
+	width: 100%;
+}
+
+div:not([class*="-intext"]).textmedia,
+div:not([class*="-intext"]).textpic {
+	>.frame-header {
+		margin-bottom: 0;
+	}
+}

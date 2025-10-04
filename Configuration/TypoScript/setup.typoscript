@@ -1,0 +1,14 @@
+# DEPENDENCIES
+@import 'EXT:bp_gallery_settings/Configuration/TypoScript/ContentElement/setup.typoscript'
+
+# CONTENT ELEMENT RENDERING
+# Manual inclusion to keep control over loading order
+@import 'EXT:bp_gallery_settings/Configuration/TypoScript/ContentElement/Element/Tab.typoscript'
+@import 'EXT:bp_gallery_settings/Configuration/TypoScript/ContentElement/Element/Textmedia.typoscript'
+@import 'EXT:bp_gallery_settings/Configuration/TypoScript/ContentElement/Element/Textpic.typoscript'
+
+page {
+  includeCSS {
+    bp_gallery_settings = EXT:bp_gallery_settings/Resources/Public/Scss/_BpGallerySettings.scss
+  }
+}

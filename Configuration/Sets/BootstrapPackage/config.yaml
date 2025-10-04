@@ -1,0 +1,4 @@
+name: quellenform/bp-gallery-settings
+label: "Bootstrap Package: Gallery Setting"
+dependencies:
+  - bootstrap-package/content-elements
