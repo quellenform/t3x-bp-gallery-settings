@@ -66,9 +66,9 @@ $gallery-resolutions: (
 // Reset the default width for text elements (will be precisely defined later by the width of the images)
 @include media-breakpoint-up('md') {
 
-	.textmedia .textmedia-text,
-	.textpic .textpic-text,
-	.tab-pane-content .tab-pane-content-text {
+	.textmedia:not([class*="-above"]):not([class*="-below"]) .textmedia-text,
+	.textpic:not([class*="-above"]):not([class*="-below"]) .textpic-text,
+	.tab-pane-content:not([class*="-above"]):not([class*="-below"]) .tab-pane-content-text {
 		width: unset;
 	}
 }
